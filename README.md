@@ -1,12 +1,12 @@
 # 🎵 Emotion-Based Music Recommendation System
 
-An AI-powered music recommendation system that detects facial emotions in real time using a webcam and recommends music based on the detected emotion. The project integrates deep learning, computer vision, and automated music playback to provide an emotion-aware listening experience.
+An AI-powered music recommendation system that detects facial emotions in real time using a webcam and recommends music based on the detected emotion. The project combines deep learning, computer vision, and automated music playback to create an emotion-aware listening experience.
 
 ## ✨ Features
 
 - Real-time facial emotion detection using a webcam.
 - Sub-emotion classification using deep learning.
-- CNN, FastNet, MobileNet, and SqueezeNet model implementations.
+- Two model implementations: **CNN and FastNet**.
 - Automatic music recommendations based on detected sub-emotions.
 - Emotion-based song queue management.
 - Live webcam feed through a Flask web interface.
@@ -49,6 +49,19 @@ Each category can contain multiple sub-emotions, with corresponding songs organi
 8. Play the selected song using Pygame.
 9. Display the live webcam feed and music controls through Flask.
 
+## 📊 Model Performance
+
+The CNN and FastNet models were trained and evaluated on the project's seven-class emotion dataset.
+
+| Model | Final Validation Accuracy | Evaluation Accuracy |
+|---|---:|---:|
+| CNN | 62.97% | 63% |
+| FastNet | 56.45% | 56% |
+
+**Results:** In the recorded experiments, CNN achieved higher classification accuracy than FastNet.
+
+*Note: These values are from the recorded notebook outputs. Performance may vary depending on the dataset split, training configuration, and evaluation procedure.*
+
 ## 📂 Project Structure
 
 ```text
@@ -60,9 +73,10 @@ Emotion-based-music-player/
 ├── Emotion_Based_Music_Recommendation_System (FINAL).pdf
 │
 ├── cnn subemotions/
+│   └── CNN training and evaluation notebook
+│
 ├── fastnet subemotions/
-├── Mobile net subemotions/
-├── Squeezenet subemotions/
+│   └── FastNet training and evaluation notebook
 │
 └── templates/
     └── index.html
@@ -151,12 +165,13 @@ Enter the desired song duration when prompted. Press `q` to close the applicatio
 
 ## 🧪 Deep Learning Models
 
-The project includes implementations and experiments involving:
+### CNN (Convolutional Neural Network)
 
-- **CNN:** Uses convolutional layers to extract facial features.
-- **FastNet:** Explores a lightweight convolutional architecture.
-- **MobileNet:** Uses an efficient architecture designed to reduce computational requirements.
-- **SqueezeNet:** Explores a compact neural network architecture.
+The CNN model uses convolutional layers, batch normalization, max pooling, and dropout to extract facial features and classify the input image into one of seven emotion classes.
+
+### FastNet
+
+FastNet explores a lightweight convolutional architecture using depthwise convolutions and related operations to perform facial emotion classification.
 
 ## 🎯 Applications
 
@@ -171,7 +186,7 @@ The project includes implementations and experiments involving:
 - Add personalized playlists and user preferences.
 - Optimize inference for real-time performance.
 - Improve the user interface and accessibility.
-- Evaluate models using accuracy, precision, recall, and F1-score.
+- Evaluate models using precision, recall, F1-score, and inference latency.
 
 ## ⚠️ Limitations
 
