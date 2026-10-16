@@ -197,7 +197,7 @@ FastNet explores a lightweight convolutional architecture using depthwise convol
 
 ## 👨‍💻 Author
 
-**Konkimalla Laxmi Vignesh**
+**Konkimalla Laxmi Vignesh**,**Praneeth D**
 
 GitHub: [K-LAXMIVIGNESH](https://github.com/K-LAXMIVIGNESH)
 
